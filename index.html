@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mustafa omar - Professional CV</title>
+    <title>Mustafa Omar Ali Hamed - Professional CV</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -351,6 +350,83 @@
             font-size: 0.9rem;
         }
         
+        /* Education Section */
+        .education-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .education-school {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .education-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Certifications Section */
+        .certifications-section {
+            background-color: #f8f9fa;
+        }
+        
+        .certification-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certification-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .certification-info h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .certification-info p {
+            margin-bottom: 0;
+            color: #666;
+        }
+        
         /* Contact Section */
         .contact-section {
             background-color: #f8f9fa;
@@ -465,7 +541,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">mustafa omar</a>
+            <a class="navbar-brand" href="#">Mustafa Omar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -476,25 +552,25 @@
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container text-center hero-content">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Profile" class="profile-img">
-            <h1 data-aos="fade-up">mustafa omar</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Senior Frontend Developer & UI/UX Designer</p>
+            <h1 data-aos="fade-up">Mustafa Omar Ali Hamed</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Software Developer | Banking & Financial Technology</p>
             <div data-aos="fade-up" data-aos-delay="200">
                 <a href="#contact" class="btn-custom">Contact Me</a>
                 <a href="#" class="btn-outline-custom">Download CV</a>
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
@@ -505,23 +581,22 @@
                 </div>
                 <div class="col-md-7" data-aos="fade-left">
                     <div class="about-text">
-                        <h3>Hello! I'm mustafa omar</h3>
-                        <p>I'm a passionate frontend developer with over 8 years of experience creating beautiful, functional websites and applications. I specialize in React, JavaScript, and modern CSS frameworks.</p>
-                        <p>My approach combines technical expertise with a keen eye for design, ensuring that every project I work on not only functions flawlessly but also provides an exceptional user experience.</p>
+                        <h3>Hello! I'm Mustafa Omar Ali Hamed</h3>
+                        <p>Innovative and results-driven software developer with 8+ years of experience in banking and financial technology. Proven expertise in designing, developing, and integrating enterprise-grade applications and APIs.</p>
+                        <p>Strong background in backend systems, database management, API integrations, and mobile app development. Adept at delivering complete solutions — from concept to deployment — with a focus on automation, performance, and security.</p>
                         
                         <ul class="info-list">
-                            <li><i class="fas fa-user"></i> <strong>Name:</strong> mustafa omar</li>
-                            <li><i class="fas fa-birthday-cake"></i> <strong>Birthday:</strong> 15 May 1988</li>
-                            <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> New York, USA</li>
-                            <li><i class="fas fa-envelope"></i> <strong>Email:</strong> john.doe@example.com</li>
-                            <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +1 (123) 456-7890</li>
+                            <li><i class="fas fa-user"></i> <strong>Name:</strong> Mustafa Omar Ali Hamed</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Dammam, KSA</li>
+                            <li><i class="fas fa-envelope"></i> <strong>Email:</strong> ali99329@gmail.com</li>
+                            <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +966 57 383 1319</li>
+                            <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> linkedin.com/in/mustafa-omar-0bb8aa119</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Skills Section -->
     <section id="skills" class="py-5 skills-section">
         <div class="container">
@@ -530,7 +605,7 @@
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>HTML/CSS</span>
+                            <span>PHP, Laravel</span>
                             <span>95%</span>
                         </div>
                         <div class="progress">
@@ -540,7 +615,7 @@
                     
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>JavaScript</span>
+                            <span>Dart, Flutter</span>
                             <span>90%</span>
                         </div>
                         <div class="progress">
@@ -550,11 +625,21 @@
                     
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>React</span>
+                            <span>C#, VB.NET</span>
                             <span>85%</span>
                         </div>
                         <div class="progress">
                             <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
                         </div>
                     </div>
                 </div>
@@ -562,7 +647,27 @@
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>UI/UX Design</span>
+                            <span>Oracle (PL/SQL), MySQL</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML, CSS, JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React, Vue.js, TypeScript</span>
                             <span>80%</span>
                         </div>
                         <div class="progress">
@@ -572,68 +677,56 @@
                     
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Node.js</span>
-                            <span>75%</span>
+                            <span>API Integration, System Analysis</span>
+                            <span>95%</span>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>WordPress</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 70%"></div>
+                            <div class="progress-bar" style="width: 95%"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience" class="py-5">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
             <div class="timeline" data-aos="fade-up">
                 <div class="timeline-item">
-                    <div class="timeline-date">2020 - Present</div>
-                    <div class="timeline-title">Senior Frontend Developer</div>
-                    <div class="timeline-company">Tech Innovations Inc.</div>
-                    <p>Lead frontend development for multiple enterprise applications, implementing responsive designs and optimizing performance.</p>
+                    <div class="timeline-date">2017 – Present</div>
+                    <div class="timeline-title">Software Developer</div>
+                    <div class="timeline-company">Animals Resources Bank</div>
+                    <p>Developed and maintained the bank's official website (ar-bank.sd). Designed and implemented backend systems for the bank's mobile application (NEON APP). Created SMS notification system for real-time customer updates. Integrated with Bashaer system for oil sector operations and with Civil Registry for automated customer data retrieval. Developed BBAN and IBAN generation for all bank customers and integrated with EBS to enable interbank transfers using BBAN. Automated standing orders, account closures, and periodic fees processing.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">2017 - 2020</div>
-                    <div class="timeline-title">Frontend Developer</div>
-                    <div class="timeline-company">Digital Solutions Ltd.</div>
-                    <p>Developed and maintained web applications using React, Redux, and modern CSS frameworks. Collaborated with UX designers to implement responsive designs.</p>
+                    <div class="timeline-date">May 2015 – June 2016</div>
+                    <div class="timeline-title">IT Department</div>
+                    <div class="timeline-company">First Link for Communication Company</div>
+                    <p>Maintained internal networks and systems. Provided support for software applications and data management processes.</p>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">2015 - 2017</div>
-                    <div class="timeline-title">Junior Web Developer</div>
-                    <div class="timeline-company">WebCraft Studios</div>
-                    <p>Created responsive websites using HTML, CSS, and JavaScript. Assisted in developing custom WordPress themes and plugins.</p>
+                    <div class="timeline-date">2014 – 2015</div>
+                    <div class="timeline-title">Developer (Internship)</div>
+                    <div class="timeline-company">Nilogy for E-Marketing and Web Solutions</div>
+                    <p>Assisted in developing web-based applications and e-marketing tools.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">My Portfolio</h2>
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80" alt="Project 1" class="portfolio-img">
                         <div class="portfolio-info">
-                            <h4 class="portfolio-title">E-commerce Platform</h4>
-                            <p class="portfolio-category">Web Development</p>
+                            <h4 class="portfolio-title">Restaurant Meals Delivery System</h4>
+                            <p class="portfolio-category">Android Application</p>
                         </div>
                     </div>
                 </div>
@@ -642,8 +735,8 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Project 2" class="portfolio-img">
                         <div class="portfolio-info">
-                            <h4 class="portfolio-title">Task Management App</h4>
-                            <p class="portfolio-category">Mobile App</p>
+                            <h4 class="portfolio-title">TV Channels System</h4>
+                            <p class="portfolio-category">Android Application</p>
                         </div>
                     </div>
                 </div>
@@ -652,15 +745,83 @@
                     <div class="portfolio-item">
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Project 3" class="portfolio-img">
                         <div class="portfolio-info">
-                            <h4 class="portfolio-title">Dashboard Analytics</h4>
-                            <p class="portfolio-category">UI/UX Design</p>
+                            <h4 class="portfolio-title">Banking System Automation</h4>
+                            <p class="portfolio-category">Backend Development & API Integration</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Project 4" class="portfolio-img">
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">Mobile Database Consistency Solution</h4>
+                            <p class="portfolio-category">Database Management</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="education-item">
+                        <div class="education-degree">B.Sc. in Computer Science</div>
+                        <div class="education-school">Omdurman Islamic University, Department of Information Technology</div>
+                        <div class="education-date">2011 – 2015</div>
+                        <p>Graduated with Second Degree</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 certifications-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certifications & Training</h2>
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <div class="certification-item">
+                        <div class="certification-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h4>ICDL Certification</h4>
+                            <p>International Computer Driving License</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certification-item">
+                        <div class="certification-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h4>Diploma in Computer Networks Design & Administration</h4>
+                            <p>Professional certification in network design and administration</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certification-item">
+                        <div class="certification-icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <div class="certification-info">
+                            <h4>Diploma in Computer Maintenance</h4>
+                            <p>Professional certification in computer hardware and software maintenance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
     <section id="contact" class="py-5 contact-section">
         <div class="container">
@@ -690,7 +851,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Location</h4>
-                                <p>123 Main Street, New York, NY 10001</p>
+                                <p>Dammam, KSA</p>
                             </div>
                         </div>
                         
@@ -700,7 +861,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p>+1 (123) 456-7890</p>
+                                <p>+966 57 383 1319</p>
                             </div>
                         </div>
                         
@@ -710,7 +871,17 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>john.doe@example.com</p>
+                                <p>ali99329@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/mustafa-omar-0bb8aa119</p>
                             </div>
                         </div>
                     </div>
@@ -718,21 +889,17 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2023 mustafa omar. All Rights Reserved.</p>
+            <p>&copy; 2023 Mustafa Omar Ali Hamed. All Rights Reserved.</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="http://www.linkedin.com/in/mustafa-omar-0bb8aa119" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     
