@@ -1,0 +1,30 @@
+body {
+scroll-behavior: smooth;
+font-family: 'Arial', sans-serif;
+}
+.hero {
+height: 100vh;
+background: url('images/hero.jpg') no-repeat center center/cover;
+color: white;
+}
+section {
+padding: 80px 0;
+}
+.hover-effect:hover {
+transform: scale(1.05);
+transition: all 0.3s ease;
+cursor: pointer;
+}
+.card {
+border: none;
+}
+
+
+/* script.js */
+document.querySelectorAll('a.nav-link').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+target.scrollIntoView({ behavior: 'smooth' });
+});
+});
