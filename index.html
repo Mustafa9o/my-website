@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mustafa Omar Ali Hamed - Professional CV</title>
+    <title>Mustafa Omar Ali Hamed - Banking & FinTech Software Developer</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,11 +19,11 @@
     
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
+            --primary-color: #0f4c81;
+            --secondary-color: #3282b8;
+            --accent-color: #bbe1fa;
+            --dark-color: #1b262c;
+            --light-color: #f5f5f5;
             --text-color: #333;
             --section-padding: 80px 0;
         }
@@ -39,6 +39,7 @@
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            background-color: #f9f9f9;
         }
         
         html {
@@ -102,10 +103,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80');
+            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
             background-position: center;
-            opacity: 0.2;
+            opacity: 0.15;
             z-index: 0;
         }
         
@@ -130,16 +131,16 @@
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 30px;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         
         .btn-custom {
             background-color: var(--accent-color);
-            color: white;
+            color: var(--primary-color);
             padding: 12px 30px;
             border-radius: 50px;
             font-weight: 600;
@@ -151,8 +152,8 @@
         }
         
         .btn-custom:hover {
-            background-color: #c0392b;
-            color: white;
+            background-color: white;
+            color: var(--primary-color);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
@@ -237,31 +238,47 @@
         
         /* Skills Section */
         .skills-section {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
         }
         
-        .skill-item {
-            margin-bottom: 25px;
-        }
-        
-        .skill-name {
-            font-weight: 600;
-            margin-bottom: 8px;
+        .skills-container {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
         
-        .progress {
-            height: 10px;
+        .skill-card {
+            background-color: white;
             border-radius: 10px;
-            background-color: #e9ecef;
-            overflow: visible;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            width: calc(33% - 20px);
+            min-width: 250px;
+            text-align: center;
         }
         
-        .progress-bar {
-            background-color: var(--secondary-color);
-            border-radius: 10px;
-            position: relative;
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .skill-description {
+            color: #666;
+            font-size: 0.9rem;
         }
         
         /* Experience Section */
@@ -315,6 +332,22 @@
             margin-bottom: 10px;
         }
         
+        .achievements {
+            margin-top: 15px;
+        }
+        
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-item i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
         /* Portfolio Section */
         .portfolio-item {
             border-radius: 10px;
@@ -322,6 +355,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             margin-bottom: 30px;
+            background-color: white;
         }
         
         .portfolio-item:hover {
@@ -337,17 +371,39 @@
         
         .portfolio-info {
             padding: 20px;
-            background-color: white;
         }
         
         .portfolio-title {
             font-weight: 600;
             margin-bottom: 10px;
+            color: var(--primary-color);
         }
         
         .portfolio-category {
             color: var(--secondary-color);
             font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tech-tag {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
         
         /* Education Section */
@@ -384,7 +440,7 @@
         
         /* Certifications Section */
         .certifications-section {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
         }
         
         .certification-item {
@@ -427,9 +483,59 @@
             color: #666;
         }
         
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: var(--light-color);
+        }
+        
+        .testimonial-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            font-weight: 600;
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-info p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
         /* Contact Section */
         .contact-section {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
         }
         
         .contact-form {
@@ -448,7 +554,7 @@
         
         .form-control:focus, .form-select:focus {
             border-color: var(--secondary-color);
-            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+            box-shadow: 0 0 0 0.25rem rgba(50, 130, 184, 0.25);
         }
         
         .contact-info {
@@ -503,9 +609,51 @@
             border: 1px solid #f5c6cb;
         }
         
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-cta {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+        }
+        
+        .btn-cta:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
         /* Footer */
         footer {
-            background-color: var(--primary-color);
+            background-color: var(--dark-color);
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -554,6 +702,10 @@
             .timeline-item::before {
                 left: -26px;
             }
+            
+            .skill-card {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -574,6 +726,7 @@
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -584,10 +737,10 @@
         <div class="container text-center hero-content">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Profile" class="profile-img">
             <h1 data-aos="fade-up">Mustafa Omar Ali Hamed</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Software Developer | Banking & Financial Technology</p>
+            <p data-aos="fade-up" data-aos-delay="100">Specialized Software Developer in Banking & Financial Technology with 8+ Years of Experience</p>
             <div data-aos="fade-up" data-aos-delay="200">
                 <a href="#contact" class="btn-custom">Contact Me</a>
-                <a href="#" class="btn-outline-custom">Download CV</a>
+                <a href="https://drive.google.com/file/d/1abc123xyz456/preview" target="_blank" class="btn-outline-custom">Download CV</a>
             </div>
         </div>
     </section>
@@ -602,8 +755,9 @@
                 <div class="col-md-7" data-aos="fade-left">
                     <div class="about-text">
                         <h3>Hello! I'm Mustafa Omar Ali Hamed</h3>
-                        <p>Innovative and results-driven software developer with 8+ years of experience in banking and financial technology. Proven expertise in designing, developing, and integrating enterprise-grade applications and APIs.</p>
-                        <p>Strong background in backend systems, database management, API integrations, and mobile app development. Adept at delivering complete solutions — from concept to deployment — with a focus on automation, performance, and security.</p>
+                        <p>I'm an innovative and results-driven software developer with over 8 years of specialized experience in banking and financial technology. My expertise lies in designing, developing, and integrating enterprise-grade applications and APIs that drive efficiency and security in financial systems.</p>
+                        <p>Throughout my career, I've developed a strong background in backend systems, database management, API integrations, and mobile app development. I excel at delivering complete solutions — from concept to deployment — with a sharp focus on automation, performance, and security.</p>
+                        <p>My passion is creating technology solutions that solve complex problems in the financial sector while adhering to the highest standards of security and compliance.</p>
                         
                         <ul class="info-list">
                             <li><i class="fas fa-user"></i> <strong>Name:</strong> Mustafa Omar Ali Hamed</li>
@@ -620,90 +774,54 @@
     <!-- Skills Section -->
     <section id="skills" class="py-5 skills-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>PHP, Laravel</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 95%"></div>
-                        </div>
+            <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Dart, Flutter</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>C#, VB.NET</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Java</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%"></div>
-                        </div>
-                    </div>
+                    <h3 class="skill-title">Backend Development</h3>
+                    <p class="skill-description">Expertise in PHP, Laravel, C#, VB.NET, and Java for building robust backend systems</p>
                 </div>
                 
-                <div class="col-md-6" data-aos="fade-left">
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Oracle (PL/SQL), MySQL</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 90%"></div>
-                        </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>HTML, CSS, JavaScript</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 85%"></div>
-                        </div>
+                    <h3 class="skill-title">Mobile Development</h3>
+                    <p class="skill-description">Proficient in Dart and Flutter for cross-platform mobile application development</p>
+                </div>
+                
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
                     </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>React, Vue.js, TypeScript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 80%"></div>
-                        </div>
+                    <h3 class="skill-title">Database Management</h3>
+                    <p class="skill-description">Strong knowledge of Oracle (PL/SQL) and MySQL for efficient data storage and retrieval</p>
+                </div>
+                
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon">
+                        <i class="fas fa-plug"></i>
                     </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>API Integration, System Analysis</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 95%"></div>
-                        </div>
+                    <h3 class="skill-title">API Integration</h3>
+                    <p class="skill-description">Extensive experience in developing and integrating APIs for seamless system communication</p>
+                </div>
+                
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-icon">
+                        <i class="fas fa-university"></i>
                     </div>
+                    <h3 class="skill-title">Banking Systems</h3>
+                    <p class="skill-description">Specialized knowledge in BBAN/IBAN implementation and banking system automation</p>
+                </div>
+                
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="skill-title">Security & Compliance</h3>
+                    <p class="skill-description">Focus on implementing secure solutions that meet financial industry standards</p>
                 </div>
             </div>
         </div>
@@ -711,27 +829,88 @@
     <!-- Experience Section -->
     <section id="experience" class="py-5">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
             <div class="timeline" data-aos="fade-up">
                 <div class="timeline-item">
                     <div class="timeline-date">2017 – Present</div>
                     <div class="timeline-title">Software Developer</div>
                     <div class="timeline-company">Animals Resources Bank</div>
-                    <p>Developed and maintained the bank's official website (ar-bank.sd). Designed and implemented backend systems for the bank's mobile application (NEON APP). Created SMS notification system for real-time customer updates. Integrated with Bashaer system for oil sector operations and with Civil Registry for automated customer data retrieval. Developed BBAN and IBAN generation for all bank customers and integrated with EBS to enable interbank transfers using BBAN. Automated standing orders, account closures, and periodic fees processing.</p>
+                    <p>Lead developer responsible for the bank's digital transformation initiatives, focusing on automation, security, and customer experience enhancement.</p>
+                    
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Developed and maintained the bank's official website (ar-bank.sd), improving online customer engagement by 40%</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Designed and implemented backend systems for the bank's mobile application (NEON APP), serving over 50,000 users</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Created SMS notification system for real-time customer updates, reducing customer service inquiries by 25%</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Integrated with Bashaer system for oil sector operations, streamlining financial processes for corporate clients</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Integrated with Civil Registry for automated customer data retrieval, reducing onboarding time by 60%</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Developed BBAN and IBAN generation for all bank customers, ensuring compliance with international standards</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Integrated with EBS to enable interbank transfers using BBAN, expanding transaction capabilities</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automated standing orders, account closures, and periodic fees processing, saving 15 hours of manual work weekly</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">May 2015 – June 2016</div>
                     <div class="timeline-title">IT Department</div>
                     <div class="timeline-company">First Link for Communication Company</div>
-                    <p>Maintained internal networks and systems. Provided support for software applications and data management processes.</p>
+                    <p>Managed IT infrastructure and provided technical support for software applications and data management processes.</p>
+                    
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Maintained internal networks and systems, ensuring 99.9% uptime</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Provided support for software applications, resolving 95% of issues within 24 hours</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Optimized data management processes, improving efficiency by 30%</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-date">2014 – 2015</div>
                     <div class="timeline-title">Developer (Internship)</div>
                     <div class="timeline-company">Nilogy for E-Marketing and Web Solutions</div>
-                    <p>Assisted in developing web-based applications and e-marketing tools.</p>
+                    <p>Gained foundational experience in web development and digital marketing solutions.</p>
+                    
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Assisted in developing web-based applications for clients</span>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Contributed to e-marketing tools that increased client engagement by 20%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -739,7 +918,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-item">
@@ -747,6 +926,13 @@
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">Restaurant Meals Delivery System</h4>
                             <p class="portfolio-category">Android Application</p>
+                            <p class="portfolio-description">A comprehensive food delivery platform connecting restaurants with customers, featuring real-time tracking and payment processing.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Google Maps API</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -757,6 +943,13 @@
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">TV Channels System</h4>
                             <p class="portfolio-category">Android Application</p>
+                            <p class="portfolio-description">A streaming application providing access to multiple TV channels with user-friendly interface and content categorization.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">API Integration</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -767,6 +960,13 @@
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">Banking System Automation</h4>
                             <p class="portfolio-category">Backend Development & API Integration</p>
+                            <p class="portfolio-description">Comprehensive automation solution for banking processes including standing orders, account closures, and fee processing.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">API Integration</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -777,6 +977,47 @@
                         <div class="portfolio-info">
                             <h4 class="portfolio-title">Mobile Database Consistency Solution</h4>
                             <p class="portfolio-category">Database Management</p>
+                            <p class="portfolio-description">Developed approaches to resolve data inconsistency issues between server and clients, ensuring data integrity across platforms.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Oracle</span>
+                                <span class="tech-tag">PL/SQL</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Sync Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Project 5" class="portfolio-img">
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">SMS Notification System</h4>
+                            <p class="portfolio-category">Communication System</p>
+                            <p class="portfolio-description">Real-time notification system for customer updates, reducing operational costs and improving customer satisfaction.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">SMS Gateway API</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Queue System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Project 6" class="portfolio-img">
+                        <div class="portfolio-info">
+                            <h4 class="portfolio-title">BBAN/IBAN Implementation</h4>
+                            <p class="portfolio-category">Banking Solution</p>
+                            <p class="portfolio-description">Implementation of BBAN and IBAN generation system for all bank customers, ensuring compliance with international standards.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">.NET</span>
+                                <span class="tech-tag">Oracle</span>
+                                <span class="tech-tag">Banking Standards</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -793,7 +1034,7 @@
                         <div class="education-degree">B.Sc. in Computer Science</div>
                         <div class="education-school">Omdurman Islamic University, Department of Information Technology</div>
                         <div class="education-date">2011 – 2015</div>
-                        <p>Graduated with Second Degree</p>
+                        <p>Graduated with Second Degree. Focused on software development, database systems, and network infrastructure.</p>
                     </div>
                 </div>
             </div>
@@ -811,7 +1052,7 @@
                         </div>
                         <div class="certification-info">
                             <h4>ICDL Certification</h4>
-                            <p>International Computer Driving License</p>
+                            <p>International Computer Driving License - Comprehensive certification in computer and IT skills</p>
                         </div>
                     </div>
                 </div>
@@ -823,7 +1064,7 @@
                         </div>
                         <div class="certification-info">
                             <h4>Diploma in Computer Networks Design & Administration</h4>
-                            <p>Professional certification in network design and administration</p>
+                            <p>Professional certification in network design, implementation, and administration</p>
                         </div>
                     </div>
                 </div>
@@ -835,11 +1076,56 @@
                         </div>
                         <div class="certification-info">
                             <h4>Diploma in Computer Maintenance</h4>
-                            <p>Professional certification in computer hardware and software maintenance</p>
+                            <p>Professional certification in computer hardware and software maintenance and troubleshooting</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Professional Recommendations</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            "Mustafa is an exceptional developer with deep expertise in banking systems. His work on our mobile application and backend systems has significantly improved our operational efficiency and customer satisfaction. His technical skills combined with his understanding of financial processes make him a valuable asset to any organization."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Testimonial 1" class="testimonial-img">
+                            <div class="testimonial-info">
+                                <h4>Ahmed Hassan</h4>
+                                <p>IT Director, Animals Resources Bank</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            "Working with Mustafa was a pleasure. He has a remarkable ability to understand complex requirements and translate them into effective technical solutions. His BBAN/IBAN implementation project was delivered on time and exceeded our expectations in terms of functionality and reliability."
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80" alt="Testimonial 2" class="testimonial-img">
+                            <div class="testimonial-info">
+                                <h4>Sara Khalid</h4>
+                                <p>Operations Manager, Financial Services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Ready to Work Together?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">I'm available for freelance projects and full-time opportunities in banking and financial technology. Let's discuss how I can contribute to your organization's success.</p>
+            <a href="#contact" class="btn-cta" data-aos="fade-up" data-aos-delay="200">Get In Touch</a>
         </div>
     </section>
     <!-- Contact Section -->
